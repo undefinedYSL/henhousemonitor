@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background2">
+
+    <RelativeLayout
+        android:id="@+id/title_ry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/curve_title_layout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cure"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_ry">
+
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="重置参数"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:background="@drawable/shape_rectangle"/>
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_reset"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/tv_temp1"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="    温度设定(单位:℃)"
+                android:textStyle="bold"
+                android:background="@drawable/shape_rectangle"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_temp2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="请点击左侧按钮"
+                android:textSize="14sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LL2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/LL1"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/tv_humi1"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="    湿度设定(单位:%)"
+                android:textStyle="bold"
+                android:background="@drawable/shape_rectangle"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_humi2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="请点击左侧按钮"
+                android:textSize="14sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LL3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/LL2"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/tv_NH31"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="   NH3设定(单位:ppm)"
+                android:textStyle="bold"
+                android:background="@drawable/shape_rectangle"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_NH32"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="请点击左侧按钮"
+                android:textSize="14sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LL4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/LL3"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/tv_H2S1"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="   H2S设定(单位:ppm)"
+                android:textStyle="bold"
+                android:background="@drawable/shape_rectangle"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:id="@+id/et_H2S2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="请点击左侧按钮"
+                android:textSize="14sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/LL4"
+            android:layout_marginLeft="73dp"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/shape_rectangle"
+            android:text="启动"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_open"
+            android:layout_marginLeft="62dp"
+            android:layout_marginStart="62dp"
+            android:layout_toEndOf="@+id/btn_open"
+            android:layout_toRightOf="@+id/btn_open"
+            android:background="@drawable/shape_rectangle"
+            android:text="关闭"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/home_footbar_layout" />
+    </LinearLayout>
+
+</RelativeLayout>
